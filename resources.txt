@@ -1,2 +1,2 @@
-https://csstools.github.io/sanitize.css/
 mapbox.com
+PureCSS
