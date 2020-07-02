@@ -22,6 +22,10 @@
    width: 49%;
    margin-top:0.2em;
  }
+ form select{
+   width: 49%;
+   margin-top:0.2em;
+ }
 
  form button{
    width: 49%;
@@ -30,6 +34,21 @@
  p{
    font-family: monospace;
  }
+
+#login-register{
+  position: fixed;
+  bottom: 0;
+}
+
+.button-success {
+            background: rgb(28, 184, 65);
+            /* this is a green */
+        }
+
+.button-xsmall {
+    font-size: 70%;
+}
+
 </style>
 
 
@@ -63,28 +82,27 @@
         </table>
 
 
-        <hr>
-        <p>Please consider registering to help support the Open PAN NIT Initiative and
-          receiving updates on our progress.
-        </p>
-        <form class="pure-form" >
-         
-              
-                  
-                  <input type="text" id="name" placeholder="Username" />
-                  <input type="password" id="password" placeholder="Password" />
+        
+        
 
-                  <input type="email" id="email" placeholder="Email Address" />
-         
-                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
-         
+
+        <div class="pure-u-1-3" id="login-register">
+          <hr>
           
-      </form>
+          <p>Please consider registering to help support the Open PAN NIT Initiative and
+            receiving updates on our progress.
+          
+          <a class="pure-button pure-button-primary button-xsmall" style="margin-left: 1em; margin-right: 0.25em;" href="#">Login</a>
+          <a class="button-success pure-button button-xsmall" style="margin-left: 1em; margin-right: 0.25em;" href="#">Register</a>
+        </p>
+          
+        </div>
+        
 
 
         </div>
         
-        <div class="pure-u-2-3" style="height: 100%;">
+        <div class="pure-u-2-3" style="height: 100% ;">
           <div id='map' style='width: 100%; height: 100%'></div>
         </div>
       </div>
@@ -108,7 +126,7 @@ style: 'mapbox://styles/mapbox/streets-v11'
 
 
 <script>
- var app = new Vue({
+ var tableApp = new Vue({
   el: '#insti-table',
   data: {
     nits: {
@@ -117,4 +135,27 @@ style: 'mapbox://styles/mapbox/streets-v11'
     }
   }
 })
+
+/*
+var registrationApp = new Vue({
+  el: '#registration',
+  data: {
+    nits: [
+      "NIT Rourkela",
+      "NIT Tiruchirappalli",
+      "NIT Warangal",
+      "NIT Surathkal",
+      "NIT Calicut",
+      "VNIT Nagpur",
+      "MNIT Jaipur",
+      "MNNIT Prayagraj(Allahabad)",
+      "NIT Kurukshetra",
+      "NIT Silchar",
+      "SVNIT Surat",
+      "MANIT Bhopal",
+      "NIT Arunachal Pradesh"
+      
+    ]
+  }
+})*/
 </script>
